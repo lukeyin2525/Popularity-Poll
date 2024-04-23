@@ -1,1 +1,100 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Grande';
+}
 
+nav {
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+.logo {
+    text-align: center;
+    font-weight: bold;
+}
+
+nav .navbar-brand {
+    font-size: xx-large;
+}
+
+li {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+form {
+    text-align: center;
+    background-color: #4f6d7a;
+}
+
+.select {
+    margin: auto;
+    width: 50%;
+    padding: 200px;
+}
+
+.input {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+a {
+    font-size: 20px;
+    font-family: "Trebuchet MS";
+    text-align: center;
+}
+
+h1,h3 {
+    text-align: center;
+}
+
+
+table
+{
+    font-weight:bold;
+    text-align: center;
+    align:center;
+}
+
+.error
+{
+    font-weight:bold;
+    font-size: 20px;
+    color:orange;
+    text-align:center;
+}
+
+.username
+{
+    padding: 20px;
+    font-weight:bold;
+    font-family:"Trebuchet MS";
+    color:white;
+}
+
+#box{
+width: 550px;
+height: 710px;
+margin:auto;
+border-style:dotted;
+border-radius:30px;
+background-color: #014462;
+}
+
+.transparent
+{
+    background-color:transparent;
+}
+
+h2
+{
+    display:flex;
+    text-align:center;
+    color:white;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+    padding:150px;
+}
