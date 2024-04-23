@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title%}
+Poll!
+{% endblock %}
+
+{% block main %}
+<form action="/genres" method="post">
+    <div class="input">
+        {% if session["error"] %}
+        <p class="error">{{text}}</p>
+        {% endif %}
+        <select name = "select" class="form-select form-select-lg mb-3" required>
+            <option selected disabled>Choose a Genre!</option>
+            {% for genre in GENRES %}
+            <option value="{{genre.genres}}">{{genre.genres}}</option>
+            {% endfor %}
+          </select>
+          <button class="btn btn-dark btn-lg" type="submit">Poll</button>
+    </div>
+</form>
+{% endblock %}

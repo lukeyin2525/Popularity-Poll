@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title%}
+Genres
+{% endblock %}
+
+{% block main %}
+<form action="/create" method="post">
+    <div class="input"><p class="error">{{text}}</p></div>
+    <div class="input">
+        <input autocomplete="off" autofocus class="form-control form-control-lg mx-auto w-auto" name="poll_name" placeholder="Name of the Poll" type="text" required>
+        </div>
+        <button class="btn btn-dark btn-lg" type="submit">Create</button>
+</form>
+{% endblock %}

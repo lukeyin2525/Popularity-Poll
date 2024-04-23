@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block title%}
+Profile!
+{% endblock %}
+
+{% block main %}
+<div style="background-color:#4f6d7a;">
+    <div id="box">
+        <div class="username">
+            <table width = 100% class="table table-info table-bordered">
+                <tbody>
+                    <br>
+                <tr>
+                    <td>
+                        <h3>Username:</h3>
+                    </td>
+                    <td>
+                    {% for data in data %}
+                        <h3>{{data.username}}</h3>
+                    {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+
+                        <form action="/chuser" method="post" class="transparent">
+                            <input autocomplete="off" autofocus class="form-control form-control-lg mx-auto w-auto" name="username" placeholder="New Username" type="text" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                            <button type="submit">Change Username</button>
+                        </form>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <table width = 100% class="table table-info table-bordered">
+                <tbody>
+                    <form action="/chpassword" method="post">
+                    <br>
+                    {% if session["password"] %}
+                        <p class="error">{{text}}</p>
+                    {% endif %}
+                    <tr>
+                        <td>
+
+                                <div class="input">
+                                    <h3>Password</h3>
+                                    </div>
+                        </td>
+                    </tr>
+                <tr>
+                    <td>
+
+                            <div class="input">
+                                <input autocomplete="off" autofocus class="form-control form-control-lg mx-auto w-auto" name="password" placeholder="Current Password" type="password" required>
+                                </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                            <div class="input">
+                                <input autocomplete="off" autofocus class="form-control form-control-lg mx-auto w-auto" name="password2" placeholder="New Password" type="password" required>
+                                </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                            <div class="input">
+                                <input autocomplete="off" autofocus class="form-control form-control-lg mx-auto w-auto" name="confirmation" placeholder="Confirm your password" type="password" required>
+                                </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="submit">Change Password</button>
+                    </td>
+                </tr>
+                </tbody>
+            </form>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
