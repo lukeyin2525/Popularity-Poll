@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title%}
+{{title}}
+{% endblock %}
+
+{% block main %}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Rank</th>
+            <th scope="col">Item</th>
+            <th scope="col">Number of Votes</th>
+            <th scope="col">Vote</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in rows %}
+        <tr>
+            <td>{{row.rank}}</td>
+            <td>{{row.name}}</td>
+            <td>{{row.votes}}</td>
+            <td>
+                <form action="/vote" method="post">
+                    <button class="btn btn-dark btn-lg" type="submit" name="name" value="{{row.name}}">Vote</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</form>
+{% endblock %}
